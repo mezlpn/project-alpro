@@ -1,56 +1,47 @@
 #include <iostream>
 using namespace std;
 
-// Function untuk memproses dan menampilkan kalimat dengan urutan kata terbalik
-void balikUrutanKata(char kalimat[]) {
+void balikUrutanKata(char kalimat[]){
     int panjang = 0;
     int jumlahKata = 0;
-    
-    // Menghitung panjang kalimat dan jumlah kata
-    while (kalimat[panjang] != '\0') {
-        if (kalimat[panjang] == ' ') {
+
+    while(kalimat[panjang] != '\0'){
+        if(kalimat[panjang] == ' '){
             jumlahKata++;
         }
         panjang++;
     }
-    jumlahKata++; // Kata terakhir
-    
-    // Array untuk menyimpan kata-kata
+    jumlahKata++;
+
     char kata[jumlahKata][100];
-    int indexKata = 0, indexKarakter = 0;
-    
-    // Memisahkan kata-kata
-    for (int i = 0; i <= panjang; i++) {
-        if (kalimat[i] == ' ' || kalimat[i] == '\0') {
-            kata[indexKata][indexKarakter] = '\0'; // Akhiri kata
+    int indexKata = 0;
+    int indexHuruf = 0;
+
+    for(int i = 0; i <= panjang; i++){
+        if(kalimat[i] == ' ' || kalimat[i] == '\0'){
+            kata[indexKata][indexHuruf] = '\0';
             indexKata++;
-            indexKarakter = 0;
+            indexHuruf = 0;
         } else {
-            kata[indexKata][indexKarakter] = kalimat[i];
-            indexKarakter++;
+            kata[indexKata][indexHuruf] = kalimat[i];
+            indexHuruf++;
         }
     }
-    
-    // Menampilkan kata-kata dalam urutan terbalik
-    cout << "hasil = ";
-    for (int i = jumlahKata - 1; i >= 0; i--) {
+
+    for(int i = jumlahKata - 1; i >= 0; i--){
         cout << kata[i];
-        if (i > 0) {
+        if(i != 0){
             cout << " ";
         }
     }
     cout << endl;
 }
 
-int main() {
+int main(){
     char kalimat[1000];
     
-    // Input kalimat
-    cout << "kalimat = ";
+    cout << "Kalimat = ";
     cin.getline(kalimat, 1000);
-    
-    // Memanggil function untuk memproses dan menampilkan hasil
     balikUrutanKata(kalimat);
-    
-    return 0;
+    return 0;    
 }
