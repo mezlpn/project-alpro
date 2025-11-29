@@ -14,17 +14,17 @@ void balikUrutanKata(char kalimat[]){
     jumlahKata++;
 
     char kata[jumlahKata][100];
-    int indexKata = 0;
-    int indexHuruf = 0;
+    int Kata = 0;
+    int Huruf = 0;
 
     for(int i = 0; i <= panjang; i++){
         if(kalimat[i] == ' ' || kalimat[i] == '\0'){
-            kata[indexKata][indexHuruf] = '\0';
-            indexKata++;
-            indexHuruf = 0;
+            kata[Kata][Huruf] = '\0';
+            Kata++;
+            Huruf = 0;
         } else {
-            kata[indexKata][indexHuruf] = kalimat[i];
-            indexHuruf++;
+            kata[Kata][Huruf] = kalimat[i];
+            Huruf++;
         }
     }
 
