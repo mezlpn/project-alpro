@@ -2,6 +2,19 @@
 #include <string>
 using namespace std;
 
+/*
+Sebuah restoran kecil dengan enam meja ingin memiliki sistem sederhana untuk mengatur reservasi pelanggan.
+Setiap meja memiliki kapasitas berbeda, mulai dari dua hingga empat kursi,
+namun dalam pencatatan reservasinya cukup dicatat siapa pemesan meja tersebut.
+Pemilik restoran ingin mengetahui meja mana saja yang sudah terisi, melakukan pencarian pengunjung berdasarkan nama,
+serta melihat laporan pendapatan dari reservasi. Sistem ini juga harus memastikan bahwa meja yang sudah dipesan tidak bisa dipesan lagi oleh orang lain.
+
+Dalam operasional harian, restoran sering menerima pengunjung yang ingin memesan meja terlebih dahulu sebelum datang.
+Dengan sistem ini, kasir dapat memasukkan nama pelanggan, memilih nomor meja, dan sistem akan menampilkan status meja secara visual (O = kosong, X = terisi).
+Ketika pelanggan datang dan ingin dicek posisinya, kasir cukup melakukan pencarian nama.
+Selain itu, pada akhir hari, restoran bisa langsung melihat jumlah meja terisi dan menghitung pendapatan otomatis berdasarkan jumlah reservasi.
+*/
+
 int main() {
     const int jumlahMeja = 6;
     int kapasitas[jumlahMeja] = {2, 4, 2, 2, 2, 4};
